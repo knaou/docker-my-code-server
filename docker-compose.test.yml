@@ -1,0 +1,10 @@
+version: "3"
+services:
+  sut:
+    image: knaou/browser-test-ja
+    volumes:
+      - ./test:/work/spec/test:ro
+    depends_on:
+      - env
+  env:
+    build: .
